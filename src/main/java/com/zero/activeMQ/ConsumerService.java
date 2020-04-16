@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 public class ConsumerService {
 	private final static Logger logger = LoggerFactory.getLogger(ConsumerService.class);
 
+	@SuppressWarnings("unused")
 	@Autowired
 	private JmsMessagingTemplate jmsMessagingTemplate;
 
