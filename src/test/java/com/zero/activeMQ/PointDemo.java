@@ -18,9 +18,9 @@ public class PointDemo {
 		// 启动事务、非持久化消息
 		// nonPersistentAndTransacted();
 
-		// autoAcknowledge();
+		 autoAcknowledge();
 
-		 clientAcknowledge();
+//		 clientAcknowledge();
 	}
 
 	/**
@@ -66,14 +66,14 @@ public class PointDemo {
 
 		// 不启动事务，自动应答
 		Session session = connection.createSession(Boolean.FALSE, Session.AUTO_ACKNOWLEDGE);
-		Destination destination = session.createQueue("aotu_queue");
+		Destination destination = session.createQueue("queue-mode");
 		MessageProducer producer = session.createProducer(destination);
 
 		// 非持久化
 		producer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
 		for (int i = 0; i <= 5; i++) {
 			TextMessage textMessage = session.createTextMessage();
-			textMessage.setText("I am " + i + "message");
+			textMessage.setText("I am " + i + " message");
 			producer.send(textMessage);
 		}
 		if (connection != null)

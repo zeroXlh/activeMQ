@@ -14,9 +14,9 @@ public class PointConsumerDemo {
 		// 启用事务消费
 		// transacted();
 
-		// autoAcknowledge();
+		 autoAcknowledge();
 
-		clientAcknowledge();
+//		clientAcknowledge();
 	}
 
 	/**
@@ -65,7 +65,7 @@ public class PointConsumerDemo {
 		// 不启动事务
 		Session session = connection.createSession(Boolean.FALSE, Session.AUTO_ACKNOWLEDGE);
 
-		Destination destination = session.createQueue("aotu_queue");
+		Destination destination = session.createQueue("queue-mode");
 
 		MessageConsumer consumer = session.createConsumer(destination);
 

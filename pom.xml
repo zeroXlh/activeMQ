@@ -21,6 +21,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+	<activemq.version>5.15.12</activemq.version>
   </properties>
 
   <dependencies>
@@ -35,12 +36,21 @@
 <!-- 		<artifactId>spring-boot-starter-web</artifactId> -->
 <!-- 	</dependency> -->
 	<!-- https://mvnrepository.com/artifact/org.apache.activemq/activemq-core -->
+<!-- 	<dependency> -->
+<!-- 	    <groupId>org.apache.activemq</groupId> -->
+<!-- 	    <artifactId>activemq-core</artifactId> -->
+<!-- 	    <version>5.7.0</version> -->
+<!-- 	</dependency> -->
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-activemq</artifactId>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.activemq/activemq-pool -->
 	<dependency>
 	    <groupId>org.apache.activemq</groupId>
-	    <artifactId>activemq-core</artifactId>
-	    <version>5.7.0</version>
+	    <artifactId>activemq-pool</artifactId>
 	</dependency>
-
+	
   </dependencies>
   
 	<build>
