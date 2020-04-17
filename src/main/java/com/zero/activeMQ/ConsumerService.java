@@ -16,14 +16,13 @@ public class ConsumerService {
 	@Autowired
 	private JmsMessagingTemplate jmsMessagingTemplate;
 
-	@JmsListener(destination = "queue-mode", containerFactory = "queueListener")
-	@SendTo("SQueue")
+//	@JmsListener(destination = "queue-mode", containerFactory = "queueListener")
 	public String handleMessage(String name) {
 		logger.info("success receive name : {}", name);
 		return name;
 	}
 
-	@JmsListener(destination = "topic-mode", containerFactory = "topicListener")
+//	@JmsListener(destination = "topic-mode", containerFactory = "topicListener")
 	public String topicMessage(String name) {
 		logger.info("success receive name: {}", name);
 		return name;

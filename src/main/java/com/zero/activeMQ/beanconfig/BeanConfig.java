@@ -1,6 +1,7 @@
 package com.zero.activeMQ.beanconfig;
 
 import javax.jms.ConnectionFactory;
+import javax.jms.Destination;
 import javax.jms.Queue;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
@@ -17,7 +18,7 @@ import org.springframework.jms.listener.SimpleMessageListenerContainer;
 public class BeanConfig {
 
 	@Bean
-	public Queue queue() {
+	public Destination queue() {
 		return new ActiveMQQueue("ActiveMQQueue");
 	}
 

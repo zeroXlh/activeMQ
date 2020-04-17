@@ -14,9 +14,9 @@ public class PointConsumerDemo {
 		// 启用事务消费
 		// transacted();
 
-		 autoAcknowledge();
+//		 autoAcknowledge();
 
-//		clientAcknowledge();
+		clientAcknowledge();
 	}
 
 	/**
